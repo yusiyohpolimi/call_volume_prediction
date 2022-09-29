@@ -5,11 +5,12 @@ niologic GmbH.
 
 ## Installation
 
-Use setup.py to install required packages/libraries. 
+First, clone the repository and install the requirements:
 
 ```
 git clone https://github.com/yusiyohpolimi/call_volume_prediction.git
-python setup.py
+
+pip install -r requirements.txt
 ```
 
 ## Training  
