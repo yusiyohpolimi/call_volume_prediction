@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib 
 from matplotlib import pyplot as plt
 
 def plot_results(test_data, pred):
@@ -16,20 +17,9 @@ def plot_results(test_data, pred):
     hourly_pred_lastyear = pd.DataFrame(
         {"Calls": test_data, "BestPrediction": pred}
     )
-    plt.style.use('ggplot')
-
-    # fig = plt.figure(figsize=(25,8))
-    # hourly_pred_lastyear.plot(ylabel='Call Counts', 
-    #          title='Hourly Call Data Prediction', fontsize=6)
     
-    # fig = plt.figure(figsize=(25,8))
-    # hourly_pred_lastyear.Calls.rolling(24).sum()\
-    #     .plot(label="Actual", linewidth=2, 
-    #           xlabel='Date', ylabel='Call Counts')
-    # hourly_pred_lastyear.BestPrediction.rolling(24).sum()\
-    #     .plot(label="Prediction", linewidth=2, title='Daily Call Data Prediction', 
-    #           xlabel='Date', ylabel='Call Counts')
-
+    plt.style.use('ggplot')
+    matplotlib.rcParams['figure.dpi'] = 120
 
     fig, axs = plt.subplots(3, 1, figsize=(12,9), sharex=True)
     axs[0].plot(hourly_pred_lastyear, lw=1)
