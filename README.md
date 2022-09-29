@@ -1,7 +1,8 @@
 # Call Volume Prediction for Seattle Fire Department
 
 The project is developed by Yusuf Can Simsek, as an answer to the request from
-niologic GmbH. 
+niologic GmbH. Detailed explanation of the design phase can be found in the notebook 
+with last run's outputs (29.09.2022). 
 
 ## Installation
 
