@@ -165,8 +165,8 @@ if __name__ == '__main__':
 
     print(f"Using {train_df.shape[0]} samples for training ***")
     train_df.drop(columns='windspeedKmph', inplace=True)
-    model, preds, test_data= train(train_df, target='calls', cv=args.cv, 
-                                   select_feat=args.rfe)
+    model, preds, test_data = train(train_df, target='calls', cv=args.cv, 
+                                    select_feat=args.rfe)
 
     if not args.cv:
         print("Plotting the results ....")
