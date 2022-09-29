@@ -1,4 +1,3 @@
-#!
 import preprocess
 import plot
 import pickle
@@ -80,7 +79,7 @@ def train(df, target=None, cv=False, select_feat=False):
 
     if cv:      # cross-validation for time series 
         # setting test size to 1 year hours
-        splitter = TimeSeriesSplit(n_splits=5, test_size=24*365*1)
+        splitter = TimeSeriesSplit(n_splits=5, test_size=24*365)
 
         fold = 0
         preds = list()
@@ -165,6 +164,7 @@ if __name__ == '__main__':
     train_df.to_csv("dataset.csv", index_label='stamp')
 
     print(f"Using {train_df.shape[0]} samples for training ***")
+    train_df.drop(columns='windspeedKmph', inplace=True)
     model, preds, test_data= train(train_df, target='calls', cv=args.cv, 
                                    select_feat=args.rfe)
 

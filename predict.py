@@ -61,9 +61,9 @@ def predict(model, start_date, end_date, freq='H'):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--start', type=str, default='2008-09-15', 
+    parser.add_argument('--start', type=str, default='2022-09-15', 
                         help='start date to make prediciton')
-    parser.add_argument('--end', type=str, default='2022-09-15',
+    parser.add_argument('--end', type=str, default='2022-09-20',
                          help='end date to make prediction')
     parser.add_argument('--freq', type=str, default='H',
                          help='resolution of the prediction')
@@ -83,4 +83,5 @@ if __name__ == '__main__':
     preds = predict(model, args.start, args.end, args.freq)
     
     # since there is no label for future prediction
-    plot.plot_results(preds.Calls, preds.Calls)
+    if args.freq == 'H':
+        plot.plot_results(preds.Calls, preds.Calls)

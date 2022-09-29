@@ -62,10 +62,8 @@ if __name__ == '__main__':
         print(err)
         print("Please train the model first and save it as xgb_model.pkl !!")
         sys.exit(0)
-
-    if args.start and args.end:
-        test_data = df[(df.index >= args.start) & (df.index < args.end)]
-
+    
+    test_data = df[(df.index >= args.start) & (df.index < args.end)]
     y_pred, score = test(model, test_data, target='calls')
     
     plot.plot_results(test_data.calls, y_pred)
