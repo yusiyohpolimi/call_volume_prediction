@@ -1,7 +1,5 @@
 # Call Volume Prediction for Seattle Fire Department
 
-<img src="https://github.com/yusiyohpolimi/thesis/blob/main/diagram_new.jpg" height="480">
-
 The project is developed by Yusuf Can Simsek, as an answer to the request from
 niologic GmbH. 
 
@@ -10,12 +8,8 @@ niologic GmbH.
 Use setup.py to install required packages/libraries. 
 
 ```
-# Build the docker container which has the all components to run OSRM service, YOLO models and detectron2 models
-docker build --rm -t <tag> -f Venv .  
-```
-
-```
-git clone https://github.com/yusiyohpolimi/call_volume_pred.git
+git clone https://github.com/yusiyohpolimi/call_volume_prediction.git
+python setup.py
 ```
 
 ## Training  
