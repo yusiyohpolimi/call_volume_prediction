@@ -54,6 +54,8 @@ optional arguments:
  
 ## Notes
  
+*	There are recent (29.09.2022) updates for sklearn and xgboost which HIGHLY affected the performance
+  particularly in colab. 
 *	Check the notebook for the details of the project, and the followed steps.
 *	Downloading weather data takes VERY long time, prefer using from the repository.
 *	Covid pandemic seems to have a strong effect on call data trend.
